@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="{% static 'style/main.css' %}?v=2">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Товары</a>
+    <a href="/cart/">Корзина</a>
+</div>
+
+<h1 class="title">Список товаров</h1>
+
+<div class="products">
+
+    {% for product in products %}
+        <div class="card">
+            <h2>{{ product.name }}</h2>
+
+            <p>{{ product.description }}</p>
+
+            <p class="price">Цена: {{ product.price }}</p>
+
+            {% if product.image %}
+                <img src="{{ product.image.url }}">
+            {% endif %}
+
+            {% if user.is_authenticated %}
+                <form action="{% url 'add_to_cart' product.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">Добавить в корзину</button>
+                </form>
+            {% else %}
+                <p class="login-warning">Авторизуйтесь для покупки</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

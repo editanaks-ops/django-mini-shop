@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* НАВБАР */
+.navbar {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #00c896;
+}
+
+/* ЗАГОЛОВОК */
+.title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 40px;
+}
+
+/* КОНТЕЙНЕР */
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+/* КАРТОЧКА */
+.card {
+    background: white;
+    color: black;
+    width: 350px;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* КАРТИНКА */
+.card img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* ЦЕНА */
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* КНОПКА */
+button {
+    background: #00c896;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00a67d;
+    transform: scale(1.05);
+}
+
+/* ПРЕДУПРЕЖДЕНИЕ */
+.login-warning {
+    color: red;
+    font-weight: bold;
+}
